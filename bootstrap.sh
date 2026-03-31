@@ -4,7 +4,7 @@ set -e
 echo "🚀 Running bootstrap script..."
 
 # Update package lists
-sudo apt-get update
+sudo apt-get update || true
 
 # Install common utilities
 sudo apt-get install -y \
@@ -31,7 +31,7 @@ echo "alias ll='ls -alF'" >> ~/.bashrc
 echo "alias gs='git status'" >> ~/.bashrc
 
 # Install Python tools (optional)
-curl -LsSf https://astral.sh/uv/install.sh | sh
-echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+# curl -LsSf https://astral.sh/uv/install.sh | sh
+# echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
 
 echo "✅ Bootstrap completed"
